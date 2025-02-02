@@ -6,6 +6,11 @@
 */
 /* Common styles */
 @import url('./reset.css');
+// Описаний в документації
+@import SimpleLightbox from "simplelightbox";
+// Додатковий імпорт стилів
+@import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 body {
   margin: 0;
