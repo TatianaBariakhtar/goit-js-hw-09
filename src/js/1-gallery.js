@@ -18,32 +18,44 @@ const images = [
     }
 ];
 
-const galleryContainer = document.querySelector('.gallery');
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryContainer = document.querySelector('ul.gallery'); 
+    console.log("JS підключено");
+    console.log(galleryContainer); // Перевіримо, чи знайдено .gallery
 
-const galleryMarkup = images
-  .map(
-    ({ preview, original, description }) => `
-    <li class="gallery-item">
-      <a class="gallery-link" href="${original}">
-        <img
-          class="gallery-image"
-          src="${preview}"
-          alt="${description}"
-        />
-      </a>
-    </li>
-  `
-  )
-  .join('');
+    if (!galleryContainer) {
+        console.error("❌ Не знайдено елемент .gallery!");
+        return;
+    }
 
-galleryContainer.innerHTML = galleryMarkup;
+    const galleryMarkup = images
+      .map(
+        ({ preview, original, description }) => `
+        <li class="gallery-item">
+          <a class="gallery-link" href="${original}">
+            <img
+              class="gallery-image"
+              src="${preview}"
+              alt="${description}"
+            />
+          </a>
+        </li>
+      `
+      )
+      .join('');
 
-// Ініціалізація SimpleLightbox
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',  
-  captionPosition: 'bottom',  
-  captionDelay: 250,  
+    galleryContainer.innerHTML = galleryMarkup;
+
+    // Ініціалізація SimpleLightbox
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',  
+      captionPosition: 'bottom',  
+      captionDelay: 250,  
+    });
+
+    console.log("✅ SimpleLightbox ініціалізовано!");
 });
+
 
 
 
