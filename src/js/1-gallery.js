@@ -65,10 +65,9 @@ const images = [
     },
   ];
   
-  // Посилання на контейнер галереї
+
   const galleryContainer = document.querySelector('.gallery');
-  
-  // Створення розмітки галереї
+ 
   const galleryMarkup = images
     .map(
       ({ preview, original, description }) => `
