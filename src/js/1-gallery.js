@@ -21,7 +21,7 @@ const images = [
 document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.querySelector('ul.gallery'); 
     console.log("JS підключено");
-    console.log(galleryContainer); // Перевіримо, чи знайдено .gallery
+    console.log(galleryContainer); 
 
     if (!galleryContainer) {
         console.error("❌ Не знайдено елемент .gallery!");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     galleryContainer.innerHTML = galleryMarkup;
 
-    // Ініціалізація SimpleLightbox
+   
     const lightbox = new SimpleLightbox('.gallery a', {
       captionsData: 'alt',  
       captionPosition: 'bottom',  
