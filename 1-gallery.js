@@ -9,4 +9,4 @@ import{S as c}from"./assets/vendor-CgTBfC_f.js";(function(){const t=document.cre
           </a>
         </li>
       `).join("");r.innerHTML=t,new c(".gallery a",{captionsData:"alt",captionPosition:"bottom",captionDelay:250}),console.log("✅ SimpleLightbox ініціалізовано!")});
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=1-gallery.js.map
